@@ -3,78 +3,232 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Southeast Clean Cities Expansion Project</title>
+    <title>Southeast Clean Cities Expansion Project Operational Metrics</title>
     <script src="https://cdn.plot.ly/plotly-2.27.0.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"></script>
     <style>
-        body { font-family: sans-serif; padding: 20px; background-color: #f9f9f9; }
-        .controls { margin-bottom: 25px; display: flex; gap: 15px; }
-        select { padding: 10px; border-radius: 4px; border: 1px solid #ccc; }
-        #chart { width: 100%; height: 600px; background: white; padding: 15px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+        :root { 
+            --bg: #0f172a; 
+            --panel: #1e293b; 
+            --text: #e2e8f0; 
+            --accent: #38bdf8;
+            --border: #334155;
+        }
+        body { 
+            font-family: 'Segoe UI', system-ui, sans-serif; 
+            background-color: var(--bg); 
+            color: var(--text); 
+            padding: 2rem; 
+            margin: 0; 
+        }
+        .dashboard-container { 
+            max-width: 1400px; 
+            margin: 0 auto; 
+        }
+        .header { 
+            border-bottom: 1px solid var(--border); 
+            padding-bottom: 1rem; 
+            margin-bottom: 2rem; 
+        }
+        .header h1 { 
+            margin: 0; 
+            font-size: 1.8rem; 
+            font-weight: 400; 
+            color: #f8fafc; 
+        }
+        .controls { 
+            display: flex; 
+            flex-wrap: wrap; 
+            gap: 1.5rem; 
+            margin-bottom: 2rem; 
+            background: var(--panel); 
+            padding: 1.5rem; 
+            border-radius: 0.5rem; 
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.2); 
+        }
+        .control-group { 
+            display: flex; 
+            flex-direction: column; 
+            gap: 0.5rem; 
+            flex: 1; 
+            min-width: 200px; 
+        }
+        label { 
+            font-size: 0.85rem; 
+            text-transform: uppercase; 
+            letter-spacing: 0.05em; 
+            color: #94a3b8; 
+            font-weight: 600;
+        }
+        select { 
+            background: var(--bg); 
+            color: var(--text); 
+            border: 1px solid var(--border); 
+            padding: 0.75rem; 
+            border-radius: 0.25rem; 
+            font-size: 1rem; 
+            outline: none; 
+            transition: border-color 0.2s; 
+            cursor: pointer;
+        }
+        select:focus { 
+            border-color: var(--accent); 
+        }
+        #chart { 
+            width: 100%; 
+            height: 70vh; 
+            background: var(--panel); 
+            padding: 1.5rem; 
+            border-radius: 0.5rem; 
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.2); 
+            box-sizing: border-box; 
+        }
     </style>
 </head>
 <body>
-    <div class="controls">
-        <select id="metricSelector">
-            <option value="GGE Impacted">GGE Impacted (gal)</option>
-            <option value="GHG Impacted">GHG Impacted (tons)</option>
-        </select>
-        <select id="yearSelector">
-            <option value="All">All Years</option>
-            <option value="2024">2024</option>
-            <option value="2025">2025</option>
-        </select>
+    <div class="dashboard-container">
+        <div class="header">
+            <h1>Regional Fleet Telemetry</h1>
+        </div>
+        <div class="controls">
+            <div class="control-group">
+                <label for="metricSelector">Operational Metric</label>
+                <select id="metricSelector" aria-label="Select Operational Metric">
+                    <option value="GGE Impacted">GGE Impacted (gal)</option>
+                    <option value="GHG Impacted">GHG Impacted (tons)</option>
+                </select>
+            </div>
+            <div class="control-group">
+                <label for="fuelSelector">Fuel Typology</label>
+                <select id="fuelSelector" aria-label="Select Fuel Typology">
+                    <option value="All">All Fuels</option>
+                </select>
+            </div>
+            <div class="control-group">
+                <label for="vehicleSelector">Vehicle Classification</label>
+                <select id="vehicleSelector" aria-label="Select Vehicle Classification">
+                    <option value="All">All Classes</option>
+                </select>
+            </div>
+        </div>
+        <div id="chart" role="img" aria-label="Grouped bar chart comparing 2024 and 2025 coalition data"></div>
     </div>
-    <div id="chart"></div>
 
     <script>
+        let globalData = [];
+
         Papa.parse('Southeast_Clean_Cities_Expansion_Project_Unified_Data.csv', {
             download: true,
             header: true,
             dynamicTyping: true,
             complete: function(results) {
-                const data = results.data;
-                renderChart(data);
+                globalData = results.data.filter(row => row.Coalition);
+                populateDynamicFilters();
+                renderComparativeChart();
                 
-                document.getElementById('metricSelector').addEventListener('change', () => renderChart(data));
-                document.getElementById('yearSelector').addEventListener('change', () => renderChart(data));
+                document.getElementById('metricSelector').addEventListener('change', renderComparativeChart);
+                document.getElementById('fuelSelector').addEventListener('change', renderComparativeChart);
+                document.getElementById('vehicleSelector').addEventListener('change', renderComparativeChart);
             }
         });
 
-        function renderChart(data) {
-            const metric = document.getElementById('metricSelector').value;
-            const year = document.getElementById('yearSelector').value;
-            
-            let filtered = data.filter(row => row.Coalition); 
-            if (year !== 'All') {
-                filtered = filtered.filter(row => String(row.Year) === year);
-            }
+        function distillCoalitionName(rawName) {
+            if (!rawName) return '';
+            const regex = /Clean Fuels Coalition|Clean Cities Coalition|Clean Vehicles Coalition|Clean Communities|Clean Cities|Clean Fuels|-/gi;
+            return rawName.replace(regex, '').replace(/\s+/g, ' ').trim();
+        }
 
-            const agg = {};
-            filtered.forEach(row => {
-                const coal = row.Coalition;
-                if (!agg[coal]) agg[coal] = 0;
-                agg[coal] += (row[metric] || 0);
+        function populateDynamicFilters() {
+            const fuels = new Set();
+            const vehicles = new Set();
+            
+            globalData.forEach(row => {
+                if (row['Fuel Type'] && row['Fuel Type'] !== 'Unknown') fuels.add(row['Fuel Type']);
+                if (row['Vehicle Class'] && row['Vehicle Class'] !== 'Unknown') vehicles.add(row['Vehicle Class']);
             });
 
-            const coalitions = Object.keys(agg).sort();
-            const values = coalitions.map(c => agg[c]);
+            const fuelSelect = document.getElementById('fuelSelector');
+            Array.from(fuels).sort().forEach(f => {
+                fuelSelect.add(new Option(f, f));
+            });
 
-            const trace = {
-                x: coalitions,
-                y: values,
+            const vehSelect = document.getElementById('vehicleSelector');
+            Array.from(vehicles).sort().forEach(v => {
+                vehSelect.add(new Option(v, v));
+            });
+        }
+
+        function renderComparativeChart() {
+            const metric = document.getElementById('metricSelector').value;
+            const fuel = document.getElementById('fuelSelector').value;
+            const vehicle = document.getElementById('vehicleSelector').value;
+            
+            let filtered = globalData;
+            if (fuel !== 'All') filtered = filtered.filter(row => row['Fuel Type'] === fuel);
+            if (vehicle !== 'All') filtered = filtered.filter(row => row['Vehicle Class'] === vehicle);
+
+            const aggregatedMatrix = { '2024': {}, '2025': {} };
+            const distinctCoalitions = new Set();
+
+            filtered.forEach(row => {
+                const distilledName = distillCoalitionName(row.Coalition);
+                if (!distilledName) return;
+                
+                const year = String(row.Year);
+                if (year !== '2024' && year !== '2025') return;
+                
+                distinctCoalitions.add(distilledName);
+                
+                if (!aggregatedMatrix[year][distilledName]) aggregatedMatrix[year][distilledName] = 0;
+                aggregatedMatrix[year][distilledName] += (row[metric] || 0);
+            });
+
+            const sortedCoalitions = Array.from(distinctCoalitions).sort();
+            
+            const trace2024 = {
+                x: sortedCoalitions,
+                y: sortedCoalitions.map(c => aggregatedMatrix['2024'][c] || 0),
+                name: '2024 Reporting Cycle',
                 type: 'bar',
-                marker: { color: '#2c7fb8' }
+                marker: { color: '#3b82f6', border: { width: 0 } }
+            };
+
+            const trace2025 = {
+                x: sortedCoalitions,
+                y: sortedCoalitions.map(c => aggregatedMatrix['2025'][c] || 0),
+                name: '2025 Reporting Cycle',
+                type: 'bar',
+                marker: { color: '#10b981', border: { width: 0 } }
             };
 
             const layout = {
-                title: `${metric} by Coalition`,
-                xaxis: { tickangle: -45, automargin: true },
-                yaxis: { title: metric, automargin: true },
-                margin: { b: 120 }
+                barmode: 'group',
+                plot_bgcolor: '#1e293b',
+                paper_bgcolor: '#1e293b',
+                font: { color: '#e2e8f0', family: 'system-ui, sans-serif' },
+                xaxis: { 
+                    tickangle: -45, 
+                    automargin: true, 
+                    gridcolor: '#334155',
+                    zerolinecolor: '#334155'
+                },
+                yaxis: { 
+                    title: metric, 
+                    automargin: true, 
+                    gridcolor: '#334155',
+                    zerolinecolor: '#334155'
+                },
+                margin: { b: 120, t: 40, l: 60, r: 20 },
+                legend: { 
+                    orientation: 'h', 
+                    y: 1.1, 
+                    x: 0.5, 
+                    xanchor: 'center',
+                    bgcolor: 'rgba(0,0,0,0)'
+                }
             };
 
-            Plotly.newPlot('chart', [trace], layout, {responsive: true});
+            Plotly.newPlot('chart', [trace2024, trace2025], layout, {responsive: true});
         }
     </script>
 </body>
