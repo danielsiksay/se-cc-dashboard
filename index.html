@@ -132,12 +132,6 @@
             }
         });
 
-        function distillCoalitionName(rawName) {
-            if (!rawName) return '';
-            const regex = /Clean Fuels Coalition|Clean Cities Coalition|Clean Vehicles Coalition|Clean Communities|Clean Cities|Clean Fuels|-/gi;
-            return rawName.replace(regex, '').replace(/\s+/g, ' ').trim();
-        }
-
         function populateDynamicFilters() {
             const fuels = new Set();
             const vehicles = new Set();
@@ -171,16 +165,16 @@
             const distinctCoalitions = new Set();
 
             filtered.forEach(row => {
-                const distilledName = distillCoalitionName(row.Coalition);
-                if (!distilledName) return;
+                const coalitionName = row.Coalition;
+                if (!coalitionName) return;
                 
                 const year = String(row.Year);
                 if (year !== '2024' && year !== '2025') return;
                 
-                distinctCoalitions.add(distilledName);
+                distinctCoalitions.add(coalitionName);
                 
-                if (!aggregatedMatrix[year][distilledName]) aggregatedMatrix[year][distilledName] = 0;
-                aggregatedMatrix[year][distilledName] += (row[metric] || 0);
+                if (!aggregatedMatrix[year][coalitionName]) aggregatedMatrix[year][coalitionName] = 0;
+                aggregatedMatrix[year][coalitionName] += (row[metric] || 0);
             });
 
             const sortedCoalitions = Array.from(distinctCoalitions).sort();
@@ -218,7 +212,7 @@
                     gridcolor: '#334155',
                     zerolinecolor: '#334155'
                 },
-                margin: { b: 120, t: 40, l: 60, r: 20 },
+                margin: { b: 150, t: 40, l: 60, r: 20 },
                 legend: { 
                     orientation: 'h', 
                     y: 1.1, 
