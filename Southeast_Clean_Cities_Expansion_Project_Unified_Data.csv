@@ -29,22 +29,22 @@ Year,State,Coalition,Fuel Type,Vehicle Class,GGE Impacted,GHG Impacted
 2024,FL,Southeast Florida Clean Cities Coalition,Propane,Heavy-Duty,965712.61283,1441.796852086438
 2024,FL,Southeast Florida Clean Cities Coalition,Propane,Light-Duty,68405.357582,102.128343274713
 2024,FL,Southeast Florida Clean Cities Coalition,Propane,Off-Road,1167.700705,1.719562881339
-2024,GA,Clean Cities,Biodiesel,Heavy-Duty,37138.595888,292.874455540498
-2024,GA,Clean Cities,Biodiesel,Light-Duty,2027.544451,61.755902124993
-2024,GA,Clean Cities,CNG,Heavy-Duty,9137883.622774,32993.16892697931
-2024,GA,Clean Cities,CNG,Light-Duty,296690.24371899996,789.71417289159
-2024,GA,Clean Cities,CNG,Off-Road,14950.82,35.106308789399996
-2024,GA,Clean Cities,E85,Light-Duty,77988.492865,390.76147805681
-2024,GA,Clean Cities,Electric,Heavy-Duty,293416.050996,2642.060676819636
-2024,GA,Clean Cities,Electric,Light-Duty,84368.457102,692.674461723616
-2024,GA,Clean Cities,Electric,Off-Road,5242588.720797,34593.99939515382
-2024,GA,Clean Cities,HEV,Heavy-Duty,15093.965529,178.730455801314
-2024,GA,Clean Cities,HEV,Light-Duty,53299.333223,622.965992546338
-2024,GA,Clean Cities,HEV Diesel,Off-Road,1731.220943,20.49970947215
-2024,GA,Clean Cities,PHEV,Light-Duty,2921.47032,32.533736100756
-2024,GA,Clean Cities,Propane,Heavy-Duty,1870884.352997,2238.582525528446
-2024,GA,Clean Cities,Propane,Light-Duty,246714.613794,368.341832554942
-2024,GA,Clean Cities,Propane,Off-Road,113257.43677700001,169.091936514248
+2024,GA,Clean Cities-Georgia,Biodiesel,Heavy-Duty,37138.595888,292.874455540498
+2024,GA,Clean Cities-Georgia,Biodiesel,Light-Duty,2027.544451,61.755902124993
+2024,GA,Clean Cities-Georgia,CNG,Heavy-Duty,9137883.622774,32993.16892697931
+2024,GA,Clean Cities-Georgia,CNG,Light-Duty,296690.24371899996,789.71417289159
+2024,GA,Clean Cities-Georgia,CNG,Off-Road,14950.82,35.106308789399996
+2024,GA,Clean Cities-Georgia,E85,Light-Duty,77988.492865,390.76147805681
+2024,GA,Clean Cities-Georgia,Electric,Heavy-Duty,293416.050996,2642.060676819636
+2024,GA,Clean Cities-Georgia,Electric,Light-Duty,84368.457102,692.674461723616
+2024,GA,Clean Cities-Georgia,Electric,Off-Road,5242588.720797,34593.99939515382
+2024,GA,Clean Cities-Georgia,HEV,Heavy-Duty,15093.965529,178.730455801314
+2024,GA,Clean Cities-Georgia,HEV,Light-Duty,53299.333223,622.965992546338
+2024,GA,Clean Cities-Georgia,HEV Diesel,Off-Road,1731.220943,20.49970947215
+2024,GA,Clean Cities-Georgia,PHEV,Light-Duty,2921.47032,32.533736100756
+2024,GA,Clean Cities-Georgia,Propane,Heavy-Duty,1870884.352997,2238.582525528446
+2024,GA,Clean Cities-Georgia,Propane,Light-Duty,246714.613794,368.341832554942
+2024,GA,Clean Cities-Georgia,Propane,Off-Road,113257.43677700001,169.091936514248
 2024,NC,Centralina Clean Fuels Coalition,Biodiesel,Heavy-Duty,298959.63804,2357.591587027411
 2024,NC,Centralina Clean Fuels Coalition,Biodiesel,Off-Road,2334.023569,18.406077707832
 2024,NC,Centralina Clean Fuels Coalition,CNG,Heavy-Duty,742178.1069,4985.303414828138
@@ -76,25 +76,25 @@ Year,State,Coalition,Fuel Type,Vehicle Class,GGE Impacted,GHG Impacted
 2024,NC,Land of Sky Clean Vehicles Coalition (Western North Carolina),Propane,Heavy-Duty,37721.644282,56.317943101324
 2024,NC,Land of Sky Clean Vehicles Coalition (Western North Carolina),Propane,Light-Duty,64568.894423000005,96.400551764006
 2024,NC,Land of Sky Clean Vehicles Coalition (Western North Carolina),Propane,Off-Road,3106.529941,3.2457299543700002
-2024,SC,Palmetto Clean Fuels Coalition   .xlsx,Biodiesel,Heavy-Duty,20836.639187,164.3174495799
-2024,SC,Palmetto Clean Fuels Coalition   .xlsx,Biodiesel,Light-Duty,633.516263,10.313010218955
-2024,SC,Palmetto Clean Fuels Coalition   .xlsx,Biodiesel,Off-Road,55.462896,0.437379631434
-2024,SC,Palmetto Clean Fuels Coalition   .xlsx,CNG,Heavy-Duty,2739538.731467,15342.127177394672
-2024,SC,Palmetto Clean Fuels Coalition   .xlsx,CNG,Light-Duty,127037.109916,763.1546402007109
-2024,SC,Palmetto Clean Fuels Coalition   .xlsx,E85,Light-Duty,1184277.237459,5933.823141613047
-2024,SC,Palmetto Clean Fuels Coalition   .xlsx,EV & PHEV Mixed,Light-Duty,23004.968674000003,169.67055643356503
-2024,SC,Palmetto Clean Fuels Coalition   .xlsx,Electric,Heavy-Duty,426281.44776899996,1884.8861629679188
-2024,SC,Palmetto Clean Fuels Coalition   .xlsx,Electric,Light-Duty,18631.479279,147.201365063085
-2024,SC,Palmetto Clean Fuels Coalition   .xlsx,Electric,Off-Road,1272.329138,8.395652564174
-2024,SC,Palmetto Clean Fuels Coalition   .xlsx,HEV,Heavy-Duty,19458.497262,230.411688563278
-2024,SC,Palmetto Clean Fuels Coalition   .xlsx,HEV,Light-Duty,31886.035003,372.68600265764695
-2024,SC,Palmetto Clean Fuels Coalition   .xlsx,Hydrogen,Heavy-Duty,5234.981296,26.108519094842
-2024,SC,Palmetto Clean Fuels Coalition   .xlsx,Hydrogen,Off-Road,668971.536348,3246.471331377902
-2024,SC,Palmetto Clean Fuels Coalition   .xlsx,PHEV,Heavy-Duty,7912.081997,62.035988618284
-2024,SC,Palmetto Clean Fuels Coalition   .xlsx,PHEV,Light-Duty,1321.897718,14.970729645104
-2024,SC,Palmetto Clean Fuels Coalition   .xlsx,Propane,Heavy-Duty,532349.892089,-152.394468253088
-2024,SC,Palmetto Clean Fuels Coalition   .xlsx,Propane,Light-Duty,458575.446775,684.647406300962
-2024,SC,Palmetto Clean Fuels Coalition   .xlsx,Propane,Off-Road,1242.855453,1.855567645361
+2024,SC,Palmetto Clean Fuels Coalition,Biodiesel,Heavy-Duty,20836.639187,164.3174495799
+2024,SC,Palmetto Clean Fuels Coalition,Biodiesel,Light-Duty,633.516263,10.313010218955
+2024,SC,Palmetto Clean Fuels Coalition,Biodiesel,Off-Road,55.462896,0.437379631434
+2024,SC,Palmetto Clean Fuels Coalition,CNG,Heavy-Duty,2739538.731467,15342.127177394672
+2024,SC,Palmetto Clean Fuels Coalition,CNG,Light-Duty,127037.109916,763.1546402007109
+2024,SC,Palmetto Clean Fuels Coalition,E85,Light-Duty,1184277.237459,5933.823141613047
+2024,SC,Palmetto Clean Fuels Coalition,EV & PHEV Mixed,Light-Duty,23004.968674000003,169.67055643356503
+2024,SC,Palmetto Clean Fuels Coalition,Electric,Heavy-Duty,426281.44776899996,1884.8861629679188
+2024,SC,Palmetto Clean Fuels Coalition,Electric,Light-Duty,18631.479279,147.201365063085
+2024,SC,Palmetto Clean Fuels Coalition,Electric,Off-Road,1272.329138,8.395652564174
+2024,SC,Palmetto Clean Fuels Coalition,HEV,Heavy-Duty,19458.497262,230.411688563278
+2024,SC,Palmetto Clean Fuels Coalition,HEV,Light-Duty,31886.035003,372.68600265764695
+2024,SC,Palmetto Clean Fuels Coalition,Hydrogen,Heavy-Duty,5234.981296,26.108519094842
+2024,SC,Palmetto Clean Fuels Coalition,Hydrogen,Off-Road,668971.536348,3246.471331377902
+2024,SC,Palmetto Clean Fuels Coalition,PHEV,Heavy-Duty,7912.081997,62.035988618284
+2024,SC,Palmetto Clean Fuels Coalition,PHEV,Light-Duty,1321.897718,14.970729645104
+2024,SC,Palmetto Clean Fuels Coalition,Propane,Heavy-Duty,532349.892089,-152.394468253088
+2024,SC,Palmetto Clean Fuels Coalition,Propane,Light-Duty,458575.446775,684.647406300962
+2024,SC,Palmetto Clean Fuels Coalition,Propane,Off-Road,1242.855453,1.855567645361
 2024,TN,East Tennessee Clean Fuels,Biodiesel,Heavy-Duty,3930823.245615,30998.417962
 2024,TN,East Tennessee Clean Fuels,Biodiesel,Light-Duty,15061.098614,245.1796
 2024,TN,East Tennessee Clean Fuels,Biodiesel,Off-Road,40570.069275,596.7617349999999
@@ -113,19 +113,19 @@ Year,State,Coalition,Fuel Type,Vehicle Class,GGE Impacted,GHG Impacted
 2024,TN,East Tennessee Clean Fuels,Propane,Light-Duty,166195.496716,248.127797
 2024,TN,East Tennessee Clean Fuels,Propane,Off-Road,1011394.4948000001,1508.833146
 2024,TN,East Tennessee Clean Fuels,Renewable Diesel,Heavy-Duty,292339.53744600003,2079.894759
-2024,TN,Middle,Biodiesel,Heavy-Duty,20.458936,0.161338884218
-2024,TN,Middle,Biodiesel,Light-Duty,301673.55214,4910.943266548002
-2024,TN,Middle,CNG,Heavy-Duty,3557962.893088,26071.925624365842
-2024,TN,Middle,CNG,Light-Duty,854169.2725,7013.940770660322
-2024,TN,Middle,E85,Light-Duty,1293598.948669,6481.579764236687
-2024,TN,Middle,Electric,Heavy-Duty,143123.96711,1212.434804625061
-2024,TN,Middle,Electric,Light-Duty,601922.438442,4651.318460986724
-2024,TN,Middle,Electric,Off-Road,26442.306779,174.483483909161
-2024,TN,Middle,HEV,Heavy-Duty,304029.414896,3600.0689012926214
-2024,TN,Middle,HEV,Light-Duty,90518.79134299999,1057.989383418905
-2024,TN,Middle,LNG,Heavy-Duty,1693805.554176,12712.73621148137
-2024,TN,Middle,PHEV,Light-Duty,468199.011809,3156.617824301156
-2024,TN,Middle,Propane,Heavy-Duty,258993.67172,-101.772602182597
+2024,TN,Middle-West Tennessee Clean Fuels,Biodiesel,Heavy-Duty,20.458936,0.161338884218
+2024,TN,Middle-West Tennessee Clean Fuels,Biodiesel,Light-Duty,301673.55214,4910.943266548002
+2024,TN,Middle-West Tennessee Clean Fuels,CNG,Heavy-Duty,3557962.893088,26071.925624365842
+2024,TN,Middle-West Tennessee Clean Fuels,CNG,Light-Duty,854169.2725,7013.940770660322
+2024,TN,Middle-West Tennessee Clean Fuels,E85,Light-Duty,1293598.948669,6481.579764236687
+2024,TN,Middle-West Tennessee Clean Fuels,Electric,Heavy-Duty,143123.96711,1212.434804625061
+2024,TN,Middle-West Tennessee Clean Fuels,Electric,Light-Duty,601922.438442,4651.318460986724
+2024,TN,Middle-West Tennessee Clean Fuels,Electric,Off-Road,26442.306779,174.483483909161
+2024,TN,Middle-West Tennessee Clean Fuels,HEV,Heavy-Duty,304029.414896,3600.0689012926214
+2024,TN,Middle-West Tennessee Clean Fuels,HEV,Light-Duty,90518.79134299999,1057.989383418905
+2024,TN,Middle-West Tennessee Clean Fuels,LNG,Heavy-Duty,1693805.554176,12712.73621148137
+2024,TN,Middle-West Tennessee Clean Fuels,PHEV,Light-Duty,468199.011809,3156.617824301156
+2024,TN,Middle-West Tennessee Clean Fuels,Propane,Heavy-Duty,258993.67172,-101.772602182597
 2025,AL,Alabama Clean Fuels Coalition,Biodiesel,Heavy-Duty,2806187.448292,22129.555558369015
 2025,AL,Alabama Clean Fuels Coalition,Biodiesel,Light-Duty,84.904583,1.382161564223
 2025,AL,Alabama Clean Fuels Coalition,CNG,Heavy-Duty,1997392.9425,10163.43803392545
@@ -155,23 +155,23 @@ Year,State,Coalition,Fuel Type,Vehicle Class,GGE Impacted,GHG Impacted
 2025,FL,Southeast Florida Clean Cities Coalition,PHEV,Light-Duty,60277.778017000004,459.00461086271
 2025,FL,Southeast Florida Clean Cities Coalition,Propane,Heavy-Duty,1194153.4792320002,1782.856208347217
 2025,FL,Southeast Florida Clean Cities Coalition,Propane,Off-Road,1167.700705,1.719562881339
-2025,GA,Clean Cities,Biodiesel,Heavy-Duty,36499.704365,287.836165784338
-2025,GA,Clean Cities,Biodiesel,Light-Duty,1055.489274,17.182308180545
-2025,GA,Clean Cities,CNG,Heavy-Duty,5511052.652814,25144.144941352737
-2025,GA,Clean Cities,CNG,Light-Duty,427716.507727,983.878494972815
-2025,GA,Clean Cities,CNG,Off-Road,7479.787499999999,17.555937007733
-2025,GA,Clean Cities,E85,Light-Duty,76505.531911,383.331099636707
-2025,GA,Clean Cities,Electric,Heavy-Duty,117412.339487,887.442391475446
-2025,GA,Clean Cities,Electric,Light-Duty,194309.634061,1522.0759041253111
-2025,GA,Clean Cities,Electric,Off-Road,1128865.058624,7448.983552784681
-2025,GA,Clean Cities,HEV,Heavy-Duty,40703.937816,481.98290532091903
-2025,GA,Clean Cities,HEV,Light-Duty,158126.946134,1848.197791425092
-2025,GA,Clean Cities,HEV Diesel,Off-Road,1731.220943,20.49970947215
-2025,GA,Clean Cities,LNG,Heavy-Duty,14311.151041,2.255695255343
-2025,GA,Clean Cities,PHEV,Light-Duty,1966.034519,22.182774736949998
-2025,GA,Clean Cities,Propane,Heavy-Duty,997657.978534,856.025797022539
-2025,GA,Clean Cities,Propane,Light-Duty,188752.89461800002,281.805710797341
-2025,GA,Clean Cities,Propane,Off-Road,158013.77133699998,235.91258421282097
+2025,GA,Clean Cities-Georgia,Biodiesel,Heavy-Duty,36499.704365,287.836165784338
+2025,GA,Clean Cities-Georgia,Biodiesel,Light-Duty,1055.489274,17.182308180545
+2025,GA,Clean Cities-Georgia,CNG,Heavy-Duty,5511052.652814,25144.144941352737
+2025,GA,Clean Cities-Georgia,CNG,Light-Duty,427716.507727,983.878494972815
+2025,GA,Clean Cities-Georgia,CNG,Off-Road,7479.787499999999,17.555937007733
+2025,GA,Clean Cities-Georgia,E85,Light-Duty,76505.531911,383.331099636707
+2025,GA,Clean Cities-Georgia,Electric,Heavy-Duty,117412.339487,887.442391475446
+2025,GA,Clean Cities-Georgia,Electric,Light-Duty,194309.634061,1522.0759041253111
+2025,GA,Clean Cities-Georgia,Electric,Off-Road,1128865.058624,7448.983552784681
+2025,GA,Clean Cities-Georgia,HEV,Heavy-Duty,40703.937816,481.98290532091903
+2025,GA,Clean Cities-Georgia,HEV,Light-Duty,158126.946134,1848.197791425092
+2025,GA,Clean Cities-Georgia,HEV Diesel,Off-Road,1731.220943,20.49970947215
+2025,GA,Clean Cities-Georgia,LNG,Heavy-Duty,14311.151041,2.255695255343
+2025,GA,Clean Cities-Georgia,PHEV,Light-Duty,1966.034519,22.182774736949998
+2025,GA,Clean Cities-Georgia,Propane,Heavy-Duty,997657.978534,856.025797022539
+2025,GA,Clean Cities-Georgia,Propane,Light-Duty,188752.89461800002,281.805710797341
+2025,GA,Clean Cities-Georgia,Propane,Off-Road,158013.77133699998,235.91258421282097
 2025,MS,Mississippi Clean Fuels Coalition,Propane,Heavy-Duty,236442.364906,-92.910975712222
 2025,NC,Centralina Clean Fuels Coalition,Biodiesel,Heavy-Duty,111293.65314099999,877.660215453069
 2025,NC,Centralina Clean Fuels Coalition,Biodiesel,Off-Road,1750.517676,13.804558280874
@@ -227,15 +227,15 @@ Year,State,Coalition,Fuel Type,Vehicle Class,GGE Impacted,GHG Impacted
 2025,TN,East Tennessee Clean Fuels,Propane,Light-Duty,126003.118429,188.121079799971
 2025,TN,East Tennessee Clean Fuels,Propane,Off-Road,770334.863599,-276.962093268481
 2025,TN,East Tennessee Clean Fuels,Renewable Diesel,Heavy-Duty,2097620.424422,14923.844261787193
-2025,TN,Middle,Biodiesel,Light-Duty,301673.55214,4910.943266548002
-2025,TN,Middle,CNG,Heavy-Duty,6742818.262859,52186.49751745965
-2025,TN,Middle,CNG,Light-Duty,1049614.6725,8598.14848691133
-2025,TN,Middle,E85,Light-Duty,865069.736958,4334.433409588594
-2025,TN,Middle,Electric,Heavy-Duty,150040.755635,1252.9336142457141
-2025,TN,Middle,Electric,Light-Duty,677623.850659,5236.351105268092
-2025,TN,Middle,Electric,Off-Road,26442.306779,174.483483909161
-2025,TN,Middle,HEV,Heavy-Duty,304029.414896,3600.068901292622
-2025,TN,Middle,HEV,Light-Duty,180440.073821,2108.995045268253
-2025,TN,Middle,LNG,Heavy-Duty,3339778.9122,27614.47613358756
-2025,TN,Middle,PHEV,Light-Duty,472916.873055,3204.2224809316986
-2025,TN,Middle,Propane,Heavy-Duty,303511.530453,-119.266073342515
+2025,TN,Middle-West Tennessee Clean Fuels,Biodiesel,Light-Duty,301673.55214,4910.943266548002
+2025,TN,Middle-West Tennessee Clean Fuels,CNG,Heavy-Duty,6742818.262859,52186.49751745965
+2025,TN,Middle-West Tennessee Clean Fuels,CNG,Light-Duty,1049614.6725,8598.14848691133
+2025,TN,Middle-West Tennessee Clean Fuels,E85,Light-Duty,865069.736958,4334.433409588594
+2025,TN,Middle-West Tennessee Clean Fuels,Electric,Heavy-Duty,150040.755635,1252.9336142457141
+2025,TN,Middle-West Tennessee Clean Fuels,Electric,Light-Duty,677623.850659,5236.351105268092
+2025,TN,Middle-West Tennessee Clean Fuels,Electric,Off-Road,26442.306779,174.483483909161
+2025,TN,Middle-West Tennessee Clean Fuels,HEV,Heavy-Duty,304029.414896,3600.068901292622
+2025,TN,Middle-West Tennessee Clean Fuels,HEV,Light-Duty,180440.073821,2108.995045268253
+2025,TN,Middle-West Tennessee Clean Fuels,LNG,Heavy-Duty,3339778.9122,27614.47613358756
+2025,TN,Middle-West Tennessee Clean Fuels,PHEV,Light-Duty,472916.873055,3204.2224809316986
+2025,TN,Middle-West Tennessee Clean Fuels,Propane,Heavy-Duty,303511.530453,-119.266073342515
