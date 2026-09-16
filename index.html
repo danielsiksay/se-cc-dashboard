@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Southeast Clean Cities Expansion Project</title>
+    <script src="https://cdn.plot.ly/plotly-2.27.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"></script>
+    <style>
+        body { font-family: sans-serif; padding: 20px; background-color: #f9f9f9; }
+        .controls { margin-bottom: 25px; display: flex; gap: 15px; }
+        select { padding: 10px; border-radius: 4px; border: 1px solid #ccc; }
+        #chart { width: 100%; height: 600px; background: white; padding: 15px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+    </style>
+</head>
+<body>
+    <div class="controls">
+        <select id="metricSelector">
+            <option value="GGE Impacted">GGE Impacted (gal)</option>
+            <option value="GHG Impacted">GHG Impacted (tons)</option>
+        </select>
+        <select id="yearSelector">
+            <option value="All">All Years</option>
+            <option value="2024">2024</option>
+            <option value="2025">2025</option>
+        </select>
+    </div>
+    <div id="chart"></div>
+
+    <script>
+        Papa.parse('Southeast_Clean_Cities_Expansion_Project_Unified_Data.csv', {
+            download: true,
+            header: true,
+            dynamicTyping: true,
+            complete: function(results) {
+                const data = results.data;
+                renderChart(data);
+                
+                document.getElementById('metricSelector').addEventListener('change', () => renderChart(data));
+                document.getElementById('yearSelector').addEventListener('change', () => renderChart(data));
+            }
+        });
+
+        function renderChart(data) {
+            const metric = document.getElementById('metricSelector').value;
+            const year = document.getElementById('yearSelector').value;
+            
+            let filtered = data.filter(row => row.Coalition); 
+            if (year !== 'All') {
+                filtered = filtered.filter(row => String(row.Year) === year);
+            }
+
+            const agg = {};
+            filtered.forEach(row => {
+                const coal = row.Coalition;
+                if (!agg[coal]) agg[coal] = 0;
+                agg[coal] += (row[metric] || 0);
+            });
+
+            const coalitions = Object.keys(agg).sort();
+            const values = coalitions.map(c => agg[c]);
+
+            const trace = {
+                x: coalitions,
+                y: values,
+                type: 'bar',
+                marker: { color: '#2c7fb8' }
+            };
+
+            const layout = {
+                title: `${metric} by Coalition`,
+                xaxis: { tickangle: -45, automargin: true },
+                yaxis: { title: metric, automargin: true },
+                margin: { b: 120 }
+            };
+
+            Plotly.newPlot('chart', [trace], layout, {responsive: true});
+        }
+    </script>
+</body>
+</html>
